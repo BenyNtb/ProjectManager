@@ -1,4 +1,4 @@
-namespace App {
+
     //Validation
 export interface Validatable {
     value: string | number;
@@ -9,7 +9,7 @@ export interface Validatable {
     max?: number;
 }
 
- export function validate(validatableInput: Validatable) {
+export function validate(validatableInput: Validatable) {
     let isValid = true;
     if (validatableInput.required) {
         isValid = isValid && validatableInput.value.toString().trim().length !== 0;
@@ -36,5 +36,5 @@ export interface Validatable {
     }
     return isValid;
 };
-}
+
 
